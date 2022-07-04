@@ -17,7 +17,7 @@ var formatter = new Intl.NumberFormat("he-IL", {
 });
 
 useHead({
-  title: title,
+  title: ` ${title} | קרן מחלקת הנוער של הפועל פתח-תקוה`,
 });
 </script>
 

@@ -5,7 +5,6 @@ on: [push, pull_request]
 jobs:
   cd:
     runs-on: ${{ matrix.os }}
-
     strategy:
       matrix:
         os: [ubuntu-latest]
@@ -16,9 +15,9 @@ jobs:
         uses: actions/checkout@master
 
       - name: Setup node env
-        uses: actions/setup-node@v2.1.2
+        uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node }}
+          node-version: 18
 
       - name: Install dependencies
         run: yarn

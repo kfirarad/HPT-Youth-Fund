@@ -3,7 +3,7 @@ const { project } = defineProps({
   project: Object,
 });
 const { id } = project;
-const linkTo = `/project/${id}#a`;
+const linkTo = { path: `/project/${id}`, hash: "#a" };
 </script>
 <template>
   <NuxtLink :to="linkTo">
