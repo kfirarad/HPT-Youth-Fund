@@ -1,0 +1,16 @@
+<script setup lang="ts">
+const { value } = defineProps({ value: Number });
+</script>
+
+<template>
+  <div
+    class="w-full bg-gray-200 rounded-full dark:bg-gray-200 border-4 border-gray-200"
+  >
+    <div
+      class="bg-blue-500 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full"
+      :style="{ width: value + '%' }"
+    >
+      {{ Math.round(value) }}%
+    </div>
+  </div>
+</template>
