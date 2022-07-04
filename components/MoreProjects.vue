@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const props = defineProps<{
-  projects: [Object];
+  projects: [any];
   excludeProjectId: number;
 }>();
 const { projects, excludeProjectId } = props;

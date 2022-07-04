@@ -1,12 +1,12 @@
 <script setup lang="ts">
 const { project } = defineProps(["project"]);
 const { id, title, image, description, target, raised } = project;
-const linkTarget = `/project/${id}`;
+const linkTarget = `/project/${id}/`;
 
 const progress = (raised / target) * 100;
 </script>
 <template>
-  <NuxtLink :to="linkTarget">
+  <NuxtLink :href="linkTarget">
     <div class="lg:max-w-1/3 rounded overflow-hidden shadow-lg hover:shadow-xl">
       <img class="w-full" :src="image" :alt="title" />
       <div class="px-6 py-4">
