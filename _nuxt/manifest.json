@@ -1,6 +1,6 @@
 {
   "node_modules/nuxt/dist/app/entry.mjs": {
-    "file": "entry-155aed47.mjs",
+    "file": "entry-ce594fdd.mjs",
     "src": "node_modules/nuxt/dist/app/entry.mjs",
     "isEntry": true,
     "dynamicImports": [
@@ -8,31 +8,31 @@
       "pages/project/[id].vue"
     ],
     "css": [
-      "entry.1b905f89.css"
+      "entry.e48659e3.css"
     ]
   },
   "pages/index.vue": {
-    "file": "index-5f4b4082.mjs",
+    "file": "index-6836e31f.mjs",
     "src": "pages/index.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_db-928e1b0a.mjs"
+      "_db-50f73dc0.mjs"
     ]
   },
-  "_db-928e1b0a.mjs": {
-    "file": "db-928e1b0a.mjs",
+  "_db-50f73dc0.mjs": {
+    "file": "db-50f73dc0.mjs",
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs"
     ]
   },
   "pages/project/[id].vue": {
-    "file": "_id_-722596aa.mjs",
+    "file": "_id_-3eac4515.mjs",
     "src": "pages/project/[id].vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_db-928e1b0a.mjs"
+      "_db-50f73dc0.mjs"
     ]
   }
 }
