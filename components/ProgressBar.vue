@@ -1,5 +1,7 @@
 <script setup lang="ts">
-const { value } = defineProps({ value: Number });
+const { value } = defineProps<{
+  value: number;
+}>();
 </script>
 
 <template>

@@ -1,8 +1,11 @@
 import db from '../db';
 
-const useDb = () => {
-    const projects = db;
-    return projects;
+export const useDb = () => {
+    const fetchProjects = (): Project[] => {
+        return db.projects;
+    }
+    const fetchProject = (id: string): Project => {
+        return db.projects.find(p => p.id === id);
+    }
+    return { fetchProjects, fetchProject };
 }
-
-export default useDb;

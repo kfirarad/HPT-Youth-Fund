@@ -1,10 +1,8 @@
 <script lang="ts" setup>
-import db from "../../db";
-const { projects } = db;
-
+const db = useDb();
 const { params } = useRoute();
 const { id: projectId } = params;
-const project = projects.find((p) => p.id.toString() === projectId);
+const project = db.fetchProject(projectId as string);
 
 const donation = ref<number>(100);
 
@@ -66,7 +64,10 @@ useHead({
       <Form />
     </div>
 
-    <MoreProjects :projects="projects" :exclude-project-id="project.id" />
+    <MoreProjects
+      :projects="db.fetchProjects()"
+      :exclude-project-id="project.id"
+    />
   </div>
 </template>
 

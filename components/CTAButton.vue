@@ -1,7 +1,7 @@
 <script setup lang="ts">
-const { project } = defineProps({
-  project: Object,
-});
+const { project } = defineProps<{
+  project: Project;
+}>();
 const { id } = project;
 const linkTo = { path: `/project/${id}`, hash: "#a" };
 </script>

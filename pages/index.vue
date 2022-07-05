@@ -1,6 +1,6 @@
 <script setup>
-import db from "../db";
-const { projects } = db;
+const db = useDb();
+const projects = db.fetchProjects();
 </script>
 
 <template>

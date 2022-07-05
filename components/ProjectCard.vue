@@ -1,5 +1,7 @@
 <script setup lang="ts">
-const { project } = defineProps(["project"]);
+const { project } = defineProps<{
+  project: Project;
+}>();
 const { id, title, image, description, target, raised } = project;
 const linkTo = { path: `/project/${id}`, hash: "#a" };
 
