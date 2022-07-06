@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-const db = useDb();
+const supabase = useSupabase();
 const { params } = useRoute();
 const { id: projectId } = params;
-const project = db.fetchProject(projectId as string);
+const project = await supabase.fetchProject(projectId as string);
 
 const donation = ref<number>(100);
 
@@ -64,8 +64,7 @@ useHead({
       <Form />
     </div>
 
-    <MoreProjects
-      :projects="db.fetchProjects()"
+    <MoreProjects      
       :exclude-project-id="project.id"
     />
   </div>

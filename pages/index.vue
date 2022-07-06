@@ -1,6 +1,6 @@
 <script setup>
-const db = useDb();
-const projects = db.fetchProjects();
+const supabase = useSupabase();
+const projects = await supabase.fetchProjects();
 </script>
 
 <template>

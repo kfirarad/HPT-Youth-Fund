@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
 html {
     direction: rtl;
+}
+}
+
+@layer components {
+  .input {
+    @apply outline-blue-500 border-2 border-gray-300 px-2 py-1 ml-2 rounded-md md:m-2 md:w-1/3 w-full mb-2 
+  }
 }

@@ -1,9 +1,12 @@
 <script setup lang="ts">
 const props = defineProps<{
-  projects: Project[];
   excludeProjectId: string;
 }>();
-const { projects, excludeProjectId } = props;
+
+const supabase = useSupabase();
+
+const { excludeProjectId } = props;
+const projects = await supabase.fetchProjects();
 </script>
 <template>
   <div>
