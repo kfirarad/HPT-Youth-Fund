@@ -4,7 +4,35 @@
 
 import { serve } from "https://deno.land/std@0.131.0/http/server.ts"
 
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Methods": "POST",
+  "Access-Control-Expose-Headers": "Content-Length, X-JSON",
+  "Access-Control-Allow-Headers": "apikey,X-Client-Info, Content-Type, Authorization, Accept, Accept-Language, X-Authorization",
+};
+
+const handleOptions = () => {
+  return new Response(
+    'ok',
+    {
+      headers: {
+        ...corsHeaders
+      }
+    }
+  );
+}
+
+const generateResponse = (body: any) =>
+  new Response(
+    JSON.stringify(body),
+    { headers: { "Content-Type": "application/json", ...corsHeaders } },
+  )
+
+
 serve(async (req) => {
+  if (req.method === 'OPTIONS') {
+    return handleOptions();
+  }
   const { amount } = await req.json()
 
   const terminalNumber = Deno.env.get('CARDCROM_TERMINAL_NUMBER');
@@ -39,24 +67,13 @@ serve(async (req) => {
     const responseValues = resBody.split(';');
     const [status, paymentCode, statusText] = responseValues;
     if (status === '0') {
-
       const iframeUrl =
         `https://secure.cardcom.solutions/External/lowProfileClearing/${terminalNumber}.aspx?LowProfileCode=${paymentCode}`
 
-      return new Response(
-        JSON.stringify({ ok: true, paymentCode: paymentCode, iframeUrl: iframeUrl }),
-        { headers: { "Content-Type": "application/json" } },
-      )
+      return generateResponse({ ok: true, paymentCode: paymentCode, iframeUrl: iframeUrl });
     } else {
-      return new Response(
-        JSON.stringify({ ok: false, error: statusText }),
-        { headers: { "Content-Type": "application/json" } },
-      )
+      return generateResponse({ ok: false, error: statusText });
     }
   }
-  return new Response(
-    JSON.stringify({ ok: false, error: 'Error while contacting payment system' }),
-    { headers: { "Content-Type": "application/json" } },
-  )
-
+  return generateResponse({ ok: false, error: 'Error while contacting payment system' });
 })
