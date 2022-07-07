@@ -2,13 +2,15 @@
 definePageMeta({
   layout: "empty",
 });
-
-const { query = {} } = useRoute();
-const { ResponseCode = "", Description } = query;
+const data = ref("");
 onMounted(() => {
-  const data = ResponseCode === "0" ? "SUCCESS" : "ERROR";
-  parent.window.postMessage(data, `${window.location.origin}`);
+  const params = new URL(window.document.location.toString()).searchParams;
+  const responseCode = params.get("ResponseCode");
+  data.value = responseCode === "0" ? "SUCCESS" : "ERROR";
+  parent?.window.postMessage(data.value, `${window.location.origin}`);
 });
 </script>
 
-<template></template>
+<template>
+  {{ data }}
+</template>
