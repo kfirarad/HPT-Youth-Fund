@@ -3,7 +3,7 @@ definePageMeta({
   layout: "empty",
 });
 
-const { path, params = {}, query = {} } = useRoute();
+const { query = {} } = useRoute();
 const { ResponseCode = "", Description } = query;
 onMounted(() => {
   const data = ResponseCode === "0" ? "SUCCESS" : "ERROR";
