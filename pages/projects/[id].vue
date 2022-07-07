@@ -69,13 +69,8 @@ useHead({
     <MoreProjects :exclude-project-id="project.id" />
   </div>
 
-  <Modal :is-open="isFormOpen" :close-modal="closeModal" title="תמיכה בפרוייקט">
-    <Form />
+  <Modal :is-open="isFormOpen" :close-modal="closeModal">
+    <h3 class="text-xl">תמיכה בפרוייקט {{ title }}</h3>
+    <PaymentModal />
   </Modal>
 </template>
-
-<style scoped>
-input[type="range"] {
-  direction: ltr;
-}
-</style>

@@ -49,8 +49,8 @@ serve(async (req) => {
     'CoinID': '1',
     'SumToBill': amount,
     'ProductName': 'Test',
-    'SuccessRedirectUrl': 'https://secure.cardcom.co.il/DealWasSuccessful.aspx',
-    'ErrorRedirectUrl': 'https://secure.cardcom.co.il/DealWasUnSuccessful.aspx?customVar=1234'
+    'SuccessRedirectUrl': 'https://fund.hapoel.dev/cardcom/success',
+    'ErrorRedirectUrl': 'https://fund.hapoel.dev/cardcom/failure'
   }
 
   for (const [key, value] of Object.entries(params)) {

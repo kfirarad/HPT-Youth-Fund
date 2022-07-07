@@ -3,7 +3,7 @@ const { project } = defineProps<{
   project: Project;
 }>();
 const { id, title, image, description, target, raised } = project;
-const linkTo = { path: `/project/${id}`, hash: "#a" };
+const linkTo = { path: `/projects/${id}`, hash: "#a" };
 
 const progress = (raised / target) * 100;
 </script>
@@ -21,7 +21,7 @@ const progress = (raised / target) * 100;
       <div class="w-full flex"></div>
       <div class="w-full flex justify-center mb-3">
         <button
-          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-80 m-auto"
+          class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded w-80 m-auto"
         >
           לתמיכה בפרוייקט
         </button>
