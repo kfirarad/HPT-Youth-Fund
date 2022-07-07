@@ -1,11 +1,11 @@
 {
   "node_modules/nuxt/dist/app/entry.mjs": {
-    "file": "entry-79e4c011.mjs",
+    "file": "entry-b65801c1.mjs",
     "src": "node_modules/nuxt/dist/app/entry.mjs",
     "isEntry": true,
     "dynamicImports": [
       "_browser-ponyfill-cc9597c5.mjs",
-      "pages/cardcom/[status].vue",
+      "pages/cardcom/usercallback.vue",
       "pages/index.vue",
       "pages/projects/[id].vue",
       "layouts/default.vue",
@@ -15,40 +15,40 @@
       "entry.f324d5ae.css"
     ]
   },
-  "pages/cardcom/[status].vue": {
-    "file": "_status_-b8a5d2f0.mjs",
-    "src": "pages/cardcom/[status].vue",
+  "pages/cardcom/usercallback.vue": {
+    "file": "usercallback-acd4613d.mjs",
+    "src": "pages/cardcom/usercallback.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs"
     ]
   },
   "pages/index.vue": {
-    "file": "index-4c26f869.mjs",
+    "file": "index-e363f500.mjs",
     "src": "pages/index.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_ProjectCard-8f3cdd41.mjs"
+      "_ProjectCard-4947a9f8.mjs"
     ]
   },
-  "_ProjectCard-8f3cdd41.mjs": {
-    "file": "ProjectCard-8f3cdd41.mjs",
+  "_ProjectCard-4947a9f8.mjs": {
+    "file": "ProjectCard-4947a9f8.mjs",
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs"
     ]
   },
   "pages/projects/[id].vue": {
-    "file": "_id_-cff5f1a1.mjs",
+    "file": "_id_-bcd2d147.mjs",
     "src": "pages/projects/[id].vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_ProjectCard-8f3cdd41.mjs"
+      "_ProjectCard-4947a9f8.mjs"
     ]
   },
   "layouts/default.vue": {
-    "file": "default-e3dc05ab.mjs",
+    "file": "default-94590d9c.mjs",
     "src": "layouts/default.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -56,7 +56,7 @@
     ]
   },
   "layouts/empty.vue": {
-    "file": "empty-35499dc5.mjs",
+    "file": "empty-e90441f4.mjs",
     "src": "layouts/empty.vue",
     "isDynamicEntry": true,
     "imports": [
