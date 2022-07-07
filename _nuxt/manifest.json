@@ -1,39 +1,66 @@
 {
   "node_modules/nuxt/dist/app/entry.mjs": {
-    "file": "entry-89a18007.mjs",
+    "file": "entry-afc115ad.mjs",
     "src": "node_modules/nuxt/dist/app/entry.mjs",
     "isEntry": true,
     "dynamicImports": [
       "_browser-ponyfill-cc9597c5.mjs",
+      "pages/cardcom/[status].vue",
       "pages/index.vue",
-      "pages/project/[id].vue"
+      "pages/projects/[id].vue",
+      "layouts/default.vue",
+      "layouts/empty.vue"
     ],
     "css": [
-      "entry.fb4df11e.css"
+      "entry.f324d5ae.css"
     ]
   },
-  "pages/index.vue": {
-    "file": "index-90b91f5a.mjs",
-    "src": "pages/index.vue",
+  "pages/cardcom/[status].vue": {
+    "file": "_status_-827cf1c7.mjs",
+    "src": "pages/cardcom/[status].vue",
     "isDynamicEntry": true,
-    "imports": [
-      "node_modules/nuxt/dist/app/entry.mjs",
-      "_ProjectCard-e5878152.mjs"
-    ]
-  },
-  "_ProjectCard-e5878152.mjs": {
-    "file": "ProjectCard-e5878152.mjs",
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs"
     ]
   },
-  "pages/project/[id].vue": {
-    "file": "_id_-350a9a9f.mjs",
-    "src": "pages/project/[id].vue",
+  "pages/index.vue": {
+    "file": "index-779b6b75.mjs",
+    "src": "pages/index.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_ProjectCard-e5878152.mjs"
+      "_ProjectCard-fd2b44ff.mjs"
+    ]
+  },
+  "_ProjectCard-fd2b44ff.mjs": {
+    "file": "ProjectCard-fd2b44ff.mjs",
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.mjs"
+    ]
+  },
+  "pages/projects/[id].vue": {
+    "file": "_id_-763551b7.mjs",
+    "src": "pages/projects/[id].vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.mjs",
+      "_ProjectCard-fd2b44ff.mjs"
+    ]
+  },
+  "layouts/default.vue": {
+    "file": "default-1e9fd01c.mjs",
+    "src": "layouts/default.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.mjs"
+    ]
+  },
+  "layouts/empty.vue": {
+    "file": "empty-ac9c5d8d.mjs",
+    "src": "layouts/empty.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.mjs"
     ]
   },
   "_browser-ponyfill-cc9597c5.mjs": {
