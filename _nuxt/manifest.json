@@ -1,6 +1,6 @@
 {
   "node_modules/nuxt/dist/app/entry.mjs": {
-    "file": "entry-afc115ad.mjs",
+    "file": "entry-79e4c011.mjs",
     "src": "node_modules/nuxt/dist/app/entry.mjs",
     "isEntry": true,
     "dynamicImports": [
@@ -16,7 +16,7 @@
     ]
   },
   "pages/cardcom/[status].vue": {
-    "file": "_status_-827cf1c7.mjs",
+    "file": "_status_-b8a5d2f0.mjs",
     "src": "pages/cardcom/[status].vue",
     "isDynamicEntry": true,
     "imports": [
@@ -24,31 +24,31 @@
     ]
   },
   "pages/index.vue": {
-    "file": "index-779b6b75.mjs",
+    "file": "index-4c26f869.mjs",
     "src": "pages/index.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_ProjectCard-fd2b44ff.mjs"
+      "_ProjectCard-8f3cdd41.mjs"
     ]
   },
-  "_ProjectCard-fd2b44ff.mjs": {
-    "file": "ProjectCard-fd2b44ff.mjs",
+  "_ProjectCard-8f3cdd41.mjs": {
+    "file": "ProjectCard-8f3cdd41.mjs",
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs"
     ]
   },
   "pages/projects/[id].vue": {
-    "file": "_id_-763551b7.mjs",
+    "file": "_id_-cff5f1a1.mjs",
     "src": "pages/projects/[id].vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_ProjectCard-fd2b44ff.mjs"
+      "_ProjectCard-8f3cdd41.mjs"
     ]
   },
   "layouts/default.vue": {
-    "file": "default-1e9fd01c.mjs",
+    "file": "default-e3dc05ab.mjs",
     "src": "layouts/default.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -56,7 +56,7 @@
     ]
   },
   "layouts/empty.vue": {
-    "file": "empty-ac9c5d8d.mjs",
+    "file": "empty-35499dc5.mjs",
     "src": "layouts/empty.vue",
     "isDynamicEntry": true,
     "imports": [
