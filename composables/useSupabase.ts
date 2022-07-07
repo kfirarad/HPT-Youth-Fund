@@ -15,8 +15,9 @@ export const useSupabase = () => {
         throw Error('Project not found');
     }
 
-    const getIframeUrl = async ({ paymentDetails: paymentDetails, amount: number }): Promise<string> => {
-        const { data, error } = await supabase.functions.invoke('hello', { body: JSON.stringify({ amount: 100 }) });
+    const getIframeUrl = async (options): Promise<string> => {
+        const { paymentDetails, amount }: { paymentDetails: PaymentDetails, amount: number } = options;
+        const { data, error } = await supabase.functions.invoke('hello', { body: JSON.stringify({ amount: amount }) });
         if (!error && data.ok) {
             return data.iframeUrl;
         } else if (error) {
