@@ -7,4 +7,5 @@ declare interface Project {
     image: string;
     donorsCount: number;
     details: string;
+    active: boolean;
 }

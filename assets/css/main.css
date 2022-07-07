@@ -6,6 +6,10 @@
 html {
     direction: rtl;
 }
+
+.h-vh80{
+    height: 80vh;
+}
 }
 
 @layer components {

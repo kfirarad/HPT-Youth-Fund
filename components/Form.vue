@@ -31,20 +31,18 @@ const setAmount = (a) => {
 };
 
 const handlePaymentClick = async () => {
-  iframeUrl.value = await getIframeUrl({ paymentDetails, amount: x.value });
+  iframeUrl.value =
+    "https://secure.cardcom.solutions/External/lowProfileClearing/1000.aspx?LowProfileCode=b3c06bb7-e109-4352-8b72-f839f2e8e370";
+  // iframeUrl.value = await getIframeUrl({ paymentDetails, amount: x.value });
 };
 </script>
 
 <template>
-  <div v-if="iframeUrl">
-    <Modal />
-    <iframe
-      :src="(iframeUrl as string)"
-      style="width: 100vw; height: 100vh"
-    ></iframe>
+  <div v-if="iframeUrl" class="h-full">
+    <iframe :src="(iframeUrl as string)" class="w-full h-vh90"></iframe>
   </div>
   <div v-else>
-    <div class="lg:w-1/3 w-full">
+    <div class="w-full">
       <fieldset class="border border-solid border-gray-300 p-3">
         <legend>סכום התמיכה</legend>
         <button
@@ -76,7 +74,7 @@ const handlePaymentClick = async () => {
       </fieldset>
     </div>
 
-    <div class="lg:w-1/2 w-full">
+    <div class="w-full">
       <fieldset class="border border-solid border-gray-300 p-3">
         <legend>פרטי חיוב</legend>
         <input

@@ -3,16 +3,24 @@ const supabase = useSupabase();
 const { params } = useRoute();
 const { id: projectId } = params;
 const project = await supabase.fetchProject(projectId as string);
-
+const isFormOpen = ref(false);
 const donation = ref<number>(100);
 
 const { title, description, image, raised, target, donorsCount, details } =
   project;
-var formatter = new Intl.NumberFormat("he-IL", {
+const formatter = new Intl.NumberFormat("he-IL", {
   style: "currency",
   currency: "ILS",
   maximumFractionDigits: 0,
 });
+
+const closeModal = () => {
+  isFormOpen.value = false;
+};
+
+const ctaHandler = () => {
+  isFormOpen.value = true;
+};
 
 useHead({
   title: ` ${title} | קרן מחלקת הנוער של הפועל פתח-תקוה`,
@@ -41,7 +49,7 @@ useHead({
           {{ description }}
         </div>
         <div>
-          <CTAButton :project="project" />
+          <CTAButton :handler="ctaHandler" />
         </div>
       </div>
       <div class="w-full lg:w-1/2">
@@ -54,20 +62,16 @@ useHead({
       <h2 class="text-2xl mt-10">תיאור הפרוייקט</h2>
       <div v-html="details" />
       <div>
-        <CTAButton :project="project" />
+        <CTAButton :handler="ctaHandler" />
       </div>
     </div>
 
-    <!-- Form -->
-    <div class="w-full mt-10" id="a">
-      <h2 class="text-2xl">תמיכה בפרויקט</h2>
-      <Form />
-    </div>
-
-    <MoreProjects      
-      :exclude-project-id="project.id"
-    />
+    <MoreProjects :exclude-project-id="project.id" />
   </div>
+
+  <Modal :is-open="isFormOpen" :close-modal="closeModal" title="תמיכה בפרוייקט">
+    <Form />
+  </Modal>
 </template>
 
 <style scoped>

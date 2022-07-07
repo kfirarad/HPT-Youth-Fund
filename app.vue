@@ -19,7 +19,9 @@ useHead({
 });
 </script>
 <template>
+  <Header />
   <div class="p-5">
     <NuxtPage />
   </div>
+  <Footer />
 </template>
