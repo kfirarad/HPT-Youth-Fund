@@ -49,8 +49,8 @@ serve(async (req) => {
     'CoinID': '1',
     'SumToBill': amount,
     'ProductName': 'Test',
-    'SuccessRedirectUrl': 'https://fund.hapoel.dev/cardcom/success',
-    'ErrorRedirectUrl': 'https://fund.hapoel.dev/cardcom/failure'
+    'SuccessRedirectUrl': 'https://fund.hapoel.dev/cardcom/usercallback',
+    'ErrorRedirectUrl': 'https://fund.hapoel.dev/cardcom/usercallback'
   }
 
   for (const [key, value] of Object.entries(params)) {
